@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="app/css/main.css" media="screen" title="no title" charset="utf-8">
     <!-- AngularJS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -21,28 +21,34 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="container" ng-app="todoListApp">
+  <body class="container" ng-app="todoListApp" ng-controller="MainCtrl">
+
     <!-- Main Content -->
-    <div class="panel panel-info">
-      <!-- Default panel contents -->
-      <div class="panel-heading text-center"><h1>My Todos</h1></div>
-      <div class="newtask"><a href="#"><i class="fa fa-plus"></i> Add New Task</a></div>
-        <div class="content">
-
-          <div>
-            <label ng-hide="editing">{{todo.name}}</label>
-            <input ng-blur="editing = false;" ng-show="editing" ng-model="todo.name" type="text"/>
-          </div>
-          <div>
-            <div class=" btn-group" role="group">
-              <button type="button" class="btn btn-warning" ng-click="editing = !editing">edit</button>
-              <button type="button" class="btn btn-success">save</button>
-              <button type="button" class="btn btn-danger">delete</button>
-            </div>
-
-       </div>
+    <main class="bg-info">
+      <div class="panel panel-info">
+        <!-- Default panel contents -->
+        <div class="panel-heading text-center"><h1>My Todos</h1></div>
+        <div class="panel-body">
+          <div ng-click="newtask()"><a href="#"><i class="fa fa-plus"></i> Add New Task</a></div>
         </div>
-    </div><!-- panel -->
+      </div><!-- panel -->
+
+      <!-- New Task Content -->
+      <div class="content" ng-repeat="todo in todoList">
+        <!-- Task Input -->
+        <div>
+          <input type="checkbox" ng-model="todo.done">
+          <input type="text" placeholder="new task...">
+        </div>
+        <!-- Task Edits -->
+        <div class=" btn-group" role="group">
+          <button type="button" class="btn btn-warning">edit</button>
+          <button type="button" class="btn btn-success">save</button>
+          <button type="button" class="btn btn-danger">delete</button>
+        </div>
+      </div>
+
+    </main>
 
     <script src="app/scripts/app.js" charset="utf-8"></script>
     <script src="app/scripts/controllers/MainCtrl.js" charset="utf-8"></script>
