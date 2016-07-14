@@ -1,0 +1,15 @@
+{
+  "name": "todo_app_project",
+  "version": "1.0.0",
+  "description": "A Todo App using Angular and PHP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Scottie Crump",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
