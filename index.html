@@ -37,7 +37,7 @@
       <div class="content" ng-repeat="todo in todoList">
         <!-- Task Input -->
         <div>
-          <label ng-hide="editing">{{todo.name}}</label>
+          <label ng-hide="editing" ng-dblclick="editing = !editing">{{todo.name}}</label>
           <input ng-blur="editing = !editing" ng-show="editing" ng-model="todo.name" type="text" placeholder="new task..."/>
           <!--<div>Editing is: {{ editing }}</div>-->
         </div>
