@@ -38,14 +38,13 @@
         <!-- Task Input -->
         <div>
           <label ng-hide="editing">{{todo.name}}</label>
-          <input ng-show="editing" ng-model="todo.name" type="text" placeholder="new task..."/>
+          <input ng-blur="editing = !editing" ng-show="editing" ng-model="todo.name" type="text" placeholder="new task..."/>
           <!--<div>Editing is: {{ editing }}</div>-->
         </div>
         <div>
         <!-- Task Edits -->
         <div class=" btn-group" role="group">
-          <button type="button" class="btn btn-warning">edit</button>
-          <button type="button" class="btn btn-success" ng-click="editing = !editing">save</button>
+          <button type="button" class="btn btn-success" ng-click="editing = !editing">save/edit</button>
           <button type="button" class="btn btn-danger">delete</button>
         </div>
       </div>
