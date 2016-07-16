@@ -1,3 +1,9 @@
+html {
+  background-color: #f7e3d9; }
+  html main {
+    margin-top: 2%; }
+
+/* New Task Content */
 .content {
   display: flex;
   flex-direction: row;

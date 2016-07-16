@@ -1,3 +1,13 @@
+
+$panel-info: #d9edf7; // Bootstrap .panel-info color class
+$bodybg: complement($panel-info);
+html {
+  background-color: $bodybg;
+  main {
+    margin-top: 2%;
+  }
+}
+/* New Task Content */
 .content{
   display: flex;
   flex-direction: row;

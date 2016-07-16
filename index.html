@@ -39,7 +39,7 @@
         <div>
           <input type="checkbox" ng-model="todo.done">
           <label ng-hide="editing" ng-dblclick="editing = !editing">{{todo.name}}</label>
-          <input ng-blur="editing = !editing" ng-show="editing" ng-model="todo.name" type="text" placeholder="new task..."/>
+          <input ng-blur="editing = !editing" ng-show="editing" ng-model="todo.name" type="text" size="80" placeholder="new task..."/>
         </div>
         <div>
           <!-- Task Edits -->
