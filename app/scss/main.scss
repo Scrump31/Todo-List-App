@@ -1,20 +1,48 @@
-
+//Variables
 $panel-info: #d9edf7; // Bootstrap .panel-info color class
+$editbtn: #7DAEC6;
+$mainwidth: 300px;
 $bodybg: complement($panel-info);
+
 html {
   background-color: $bodybg;
+}
   main {
     margin-top: 2%;
     padding: 10px;
+    input[type="text"] {
+      height: 30px;
+      width: $mainwidth;
+    }
+    label {
+      width: $mainwidth;
+    }
+  }
+
+  /* Edit Buton */
+  .editbtn {
+    background-color:$editbtn;
+    color: white;
+    border: 1px solid darken($editbtn, 20%);
+    &:hover {
+      background-color: darken($editbtn, 10%);
+    }
+    &:active {
+      background-color: darken($editbtn, 20%);
+
+    }
+
   }
   .container {
     padding-bottom: 15px;
+    max-width: 970px;
   }
-}
+
 /* New Task Content */
 .content{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }

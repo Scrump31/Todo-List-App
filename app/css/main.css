@@ -1,10 +1,28 @@
 html {
   background-color: #f7e3d9; }
-  html main {
-    margin-top: 2%;
-    padding: 10px; }
-  html .container {
-    padding-bottom: 15px; }
+
+main {
+  margin-top: 2%;
+  padding: 10px; }
+  main input[type="text"] {
+    height: 30px;
+    width: 300px; }
+  main label {
+    width: 300px; }
+
+/* Edit Buton */
+.editbtn {
+  background-color: #7DAEC6;
+  color: white;
+  border: 1px solid #437d9a; }
+  .editbtn:hover {
+    background-color: #5a98b6; }
+  .editbtn:active {
+    background-color: #437d9a; }
+
+.container {
+  padding-bottom: 15px;
+  max-width: 970px; }
 
 /* New Task Content */
 .content {
@@ -15,4 +33,6 @@ html {
   -ms-flex-pack: justify;
   justify-content: space-between;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }

@@ -25,9 +25,9 @@
 
     <!-- Main Content -->
     <main class="bg-info">
-      <div class="panel panel-info">
+      <div class="panel panel-info text-center">
         <!-- Default panel contents -->
-        <div class="panel-heading text-center"><h1>My Todos</h1></div>
+        <div class="panel-heading"><h1>My Todos</h1></div>
         <div class="panel-body">
           <div ng-click="newtask()"><a href="#"><i class="fa fa-plus"></i> Add New Task</a></div>
         </div>
@@ -39,12 +39,12 @@
         <div>
           <input type="checkbox" ng-model="todo.done">
           <label ng-hide="editing" ng-dblclick="editing = !editing">{{todo.name}}</label>
-          <input ng-blur="editing = !editing" ng-show="editing" ng-model="todo.name" type="text" height="20" size="80" placeholder="new task..."/>
+          <input ng-blur="editing = !editing" ng-show="editing" ng-model="todo.name" type="text" maxlength="45" placeholder="new task..."/>
         </div>
         <div>
           <!-- Task Edits -->
           <div class=" btn-group" role="group">
-            <button type="button" class="btn btn-success" ng-click="editing = !editing">save/edit</button>
+            <button type="button" class="btn editbtn" ng-click="editing = !editing">save/edit</button>
             <button type="button" ng-disabled="!todo.done" class="btn btn-danger" data-toggle="modal" data-target="#myModal">delete</button>
           </div>
           <!-- Modal -->
@@ -57,7 +57,7 @@
                     <h3>Are you sure you want to delete the task(s)?</h3>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-success" data-dismiss="modal">Nah</button>
+                  <button type="button" class="btn btn-success editbtn" data-dismiss="modal">Nah</button>
                   <button ng-click="remove()" type="button" id='confirmDel' data-dismiss="modal" class="btn btn-danger">Yea</button>
                 </div>
               </div>
