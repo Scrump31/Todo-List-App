@@ -36,8 +36,7 @@ html {
 
   /* Edit Button */
   .editbtn {
-    background-color:$editbtn;
-    color: white;
+    @include editstates($editbtn);
     border: 1px solid darken($editbtn, 20%);
     &:active {
       @include editstates(darken($editbtn, 20%));

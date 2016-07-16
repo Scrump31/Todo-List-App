@@ -7,7 +7,6 @@ main {
   main input[type="text"] {
     height: 30px;
     width: 300px;
-    font-size: 2rem;
     font-family: "Open Sans", sans-serif; }
     @media (max-width: 320px) {
       main input[type="text"] {
@@ -22,8 +21,8 @@ main {
 
 /* Edit Button */
 .editbtn {
-  background-color: #7DAEC6;
   color: white;
+  background-color: #7DAEC6;
   border: 1px solid #437d9a; }
   .editbtn:active {
     color: white;
