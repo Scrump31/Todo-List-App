@@ -1,11 +1,18 @@
 html {
   background-color: #f7e3d9; }
   html main {
-    margin-top: 2%; }
+    margin-top: 2%;
+    padding: 10px; }
+  html .container {
+    padding-bottom: 15px; }
 
 /* New Task Content */
 .content {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-align: center;
   align-items: center; }
