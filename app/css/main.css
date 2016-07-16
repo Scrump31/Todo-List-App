@@ -15,10 +15,18 @@ main {
   background-color: #7DAEC6;
   color: white;
   border: 1px solid #437d9a; }
-  .editbtn:hover {
-    background-color: #5a98b6; }
   .editbtn:active {
+    color: white;
     background-color: #437d9a; }
+  .editbtn:visited {
+    color: white;
+    background-color: #437d9a; }
+  .editbtn:hover {
+    color: white;
+    background-color: #5a98b6; }
+  .editbtn:focus {
+    color: white;
+    background-color: #5a98b6; }
 
 .container {
   padding-bottom: 15px;
