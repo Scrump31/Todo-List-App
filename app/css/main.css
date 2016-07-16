@@ -6,11 +6,21 @@ main {
   padding: 10px; }
   main input[type="text"] {
     height: 30px;
-    width: 300px; }
+    width: 300px;
+    font-size: 2rem;
+    font-family: "Open Sans", sans-serif; }
+    @media (max-width: 320px) {
+      main input[type="text"] {
+        width: 250px; } }
   main label {
-    width: 300px; }
+    width: 300px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem; }
+    @media (max-width: 320px) {
+      main label {
+        width: 250px; } }
 
-/* Edit Buton */
+/* Edit Button */
 .editbtn {
   background-color: #7DAEC6;
   color: white;
@@ -43,4 +53,14 @@ main {
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding: 10px 0px 5px 0px; }
+
+/* Btn-group Media Query */
+@media (max-width: 512px) {
+  .btn-group {
+    margin-top: 5px;
+    margin-left: 100px; } }
+  @media (max-width: 512px) and (max-width: 320px) {
+    .btn-group {
+      margin-left: 65px; } }

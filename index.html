@@ -9,7 +9,10 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="app/css/main.css" media="screen" title="no title" charset="utf-8">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="app/css/main.css" media="screen" charset="utf-8">
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
     <!-- AngularJS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 
@@ -34,12 +37,12 @@
       </div><!-- panel -->
 
       <!-- New Task Content -->
-      <div class="content" ng-repeat="todo in todoList">
+      <div class="content text-center" ng-repeat="todo in todoList">
         <!-- Task Input -->
         <div>
           <input type="checkbox" ng-model="todo.done">
           <label ng-hide="editing" ng-dblclick="editing = !editing">{{todo.name}}</label>
-          <input ng-blur="editing = !editing" ng-show="editing" ng-model="todo.name" type="text" maxlength="45" placeholder="new task..."/>
+          <input ng-blur="editing = !editing" ng-show="editing" ng-model="todo.name" type="text" maxlength="44" placeholder="new task..."/>
         </div>
         <div>
           <!-- Task Edits -->

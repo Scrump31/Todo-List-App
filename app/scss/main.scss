@@ -3,6 +3,7 @@ $panel-info: #d9edf7; // Bootstrap .panel-info color class
 $editbtn: #7DAEC6;
 $mainwidth: 300px;
 $bodybg: complement($panel-info);
+$fontfam:'Open Sans', sans-serif;
 
 //edit btn mixin
 @mixin editstates($bgcolor) {
@@ -18,13 +19,22 @@ html {
     input[type="text"] {
       height: 30px;
       width: $mainwidth;
+      font-family: $fontfam;
+      @media (max-width: 320px) {
+        width: $mainwidth - 50;
+      }
     }
     label {
       width: $mainwidth;
+      @media (max-width: 320px) {
+        width: $mainwidth - 50;
+      }
+      font-family: $fontfam;
+      font-size: 2rem;
     }
   }
 
-  /* Edit Buton */
+  /* Edit Button */
   .editbtn {
     background-color:$editbtn;
     color: white;
@@ -41,8 +51,6 @@ html {
     &:focus {
       @include editstates(darken($editbtn, 10%));
     }
-
-
   }
   .container {
     padding-bottom: 15px;
@@ -56,4 +64,16 @@ html {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
+  padding: 10px 0px 5px 0px;
+}
+/* Btn-group Media Query */
+@media (max-width: 512px) {
+  .btn-group {
+    margin-top: 5px;
+    margin-left: 100px;
+    @media (max-width: 320px) {
+      margin-left: 65px;
+    }
+  }
 }
