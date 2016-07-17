@@ -39,6 +39,7 @@ main {
 
 .container {
   padding-bottom: 15px;
+  margin-top: 15px;
   max-width: 970px; }
 
 /* New Task Content */
